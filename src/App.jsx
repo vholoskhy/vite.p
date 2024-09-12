@@ -11,23 +11,27 @@ function App() {
   };
 
   return (
-    <div>
-      <div onClick={handleClickButton}>
+    <div className="header">
+      <div onClick={handleClickButton} className={isOpen ? "hidden" : "block"}>
         <p className="cursor-pointer">Klick</p>
       </div>
 
       {isOpen && (
         <>
-          <p className="container">ZUAN SANGEAN</p>
-          <div className="container text-6xl text-red-700 flex ">
+          <p className="container-p">produk</p>
+          <div className="container">
             <h1>AutoBot</h1>
-            <ul>
-              <li className="shadow-emerald-500">Home</li>
+            <ul className="navbar">
+              <li>Home</li>
               <li>About</li>
               <li>portofolio</li>
               <li>Profil</li>
               <li>Contact</li>
             </ul>
+            <div>
+              <button className="Belisekarang">Beli Sekarang</button>
+              <button className="Cart">cart</button>
+            </div>
           </div>
         </>
       )}
@@ -36,3 +40,4 @@ function App() {
 }
 
 export default App;
+// export function App(props)
